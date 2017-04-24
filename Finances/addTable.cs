@@ -15,7 +15,6 @@ namespace Finances
 {
     public partial class addTableForm : Form
     {
-        //private DataTable dataTable = new DataTable();
         ErrorProvider ep = new ErrorProvider();
         public addTableForm()
         {

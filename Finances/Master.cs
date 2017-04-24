@@ -27,5 +27,11 @@ namespace Finances
             addTableForm frm = new addTableForm();
             frm.Show();
         }
+
+        private void viewData_Click(object sender, EventArgs e)
+        {
+            viewData frm = new viewData();
+            frm.Show();
+        }
     }
 }

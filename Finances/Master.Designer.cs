@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.addTableFormCall = new System.Windows.Forms.Button();
+            this.viewData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addTableFormCall
@@ -41,11 +42,22 @@
             this.addTableFormCall.UseVisualStyleBackColor = true;
             this.addTableFormCall.Click += new System.EventHandler(this.button1_Click);
             // 
+            // viewData
+            // 
+            this.viewData.Location = new System.Drawing.Point(25, 73);
+            this.viewData.Name = "viewData";
+            this.viewData.Size = new System.Drawing.Size(139, 23);
+            this.viewData.TabIndex = 1;
+            this.viewData.Text = "View Data";
+            this.viewData.UseVisualStyleBackColor = true;
+            this.viewData.Click += new System.EventHandler(this.viewData_Click);
+            // 
             // masterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 261);
+            this.Controls.Add(this.viewData);
             this.Controls.Add(this.addTableFormCall);
             this.Name = "masterForm";
             this.Text = "Finance Application";
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Button addTableFormCall;
+        private System.Windows.Forms.Button viewData;
     }
 }
