@@ -26,8 +26,8 @@ namespace Finances
             "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"" + dataPath + "\"; Integrated Security = True";
 
             // Select to see if a row matches the user's designated table
-            string validateName = "SELECT * FROM dbo.FinanceValues";
-            SqlCommand cmd = new SqlCommand(validateName, conn);
+            string query = "SELECT * FROM dbo.FinanceValues";
+            SqlCommand cmd = new SqlCommand(query, conn);
 
             conn.Open();
 
@@ -36,6 +36,5 @@ namespace Finances
 
             dataGridView1.DataSource = dt;
         }
-
     }
 }

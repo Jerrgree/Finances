@@ -16,6 +16,7 @@ namespace Finances
     public partial class addTableForm : Form
     {
         ErrorProvider ep = new ErrorProvider();
+        static string dataPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\FinanceData.mdf";
         public addTableForm()
         {
             InitializeComponent();
@@ -39,9 +40,6 @@ namespace Finances
             // Retrieve the account name
             string tableName = tableNameInput.Text;
 
-            // Find the Database
-            string dataPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\FinanceData.mdf";
-
             // Open a connection to the database
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString =
@@ -52,9 +50,6 @@ namespace Finances
             SqlCommand cmd = new SqlCommand(validateName, conn);
 
             conn.Open();
-
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //da.Fill(dataTable);
 
             int count = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -92,7 +87,7 @@ namespace Finances
             bool isValid = true;
 
             // Make sure that the value field is monetary
-            if (!Regex.IsMatch(initValueInput.Text, @"^[0-9]+(.$^[0-9]^[0-9])?"))
+            if (!Regex.IsMatch(initValueInput.Text, @"[0-9]+(\.[0-9][0-9])?"))
             {
                 isValid = false;
 
