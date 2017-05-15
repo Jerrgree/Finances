@@ -39,11 +39,11 @@
             // 
             // addTable
             // 
-            this.addTable.Location = new System.Drawing.Point(12, 159);
+            this.addTable.Location = new System.Drawing.Point(12, 109);
             this.addTable.Name = "addTable";
             this.addTable.Size = new System.Drawing.Size(75, 23);
             this.addTable.TabIndex = 0;
-            this.addTable.Text = "Add Table";
+            this.addTable.Text = "Add Financial SOurce";
             this.addTable.UseVisualStyleBackColor = true;
             this.addTable.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -58,7 +58,7 @@
             // 
             // initValueInput
             // 
-            this.initValueInput.Location = new System.Drawing.Point(12, 51);
+            this.initValueInput.Location = new System.Drawing.Point(145, 13);
             this.initValueInput.Name = "initValueInput";
             this.initValueInput.Size = new System.Drawing.Size(100, 20);
             this.initValueInput.TabIndex = 3;
@@ -66,7 +66,7 @@
             // initValueLabel
             // 
             this.initValueLabel.AutoSize = true;
-            this.initValueLabel.Location = new System.Drawing.Point(9, 74);
+            this.initValueLabel.Location = new System.Drawing.Point(142, 46);
             this.initValueLabel.Name = "initValueLabel";
             this.initValueLabel.Size = new System.Drawing.Size(61, 13);
             this.initValueLabel.TabIndex = 4;
@@ -76,7 +76,7 @@
             // 
             this.isBankAccount.AutoSize = true;
             this.isBankAccount.Checked = true;
-            this.isBankAccount.Location = new System.Drawing.Point(13, 89);
+            this.isBankAccount.Location = new System.Drawing.Point(12, 63);
             this.isBankAccount.Name = "isBankAccount";
             this.isBankAccount.Size = new System.Drawing.Size(93, 17);
             this.isBankAccount.TabIndex = 5;
@@ -87,7 +87,7 @@
             // isCreditCard
             // 
             this.isCreditCard.AutoSize = true;
-            this.isCreditCard.Location = new System.Drawing.Point(13, 112);
+            this.isCreditCard.Location = new System.Drawing.Point(12, 86);
             this.isCreditCard.Name = "isCreditCard";
             this.isCreditCard.Size = new System.Drawing.Size(77, 17);
             this.isCreditCard.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 261);
+            this.ClientSize = new System.Drawing.Size(601, 140);
             this.Controls.Add(this.tableNameInput);
             this.Controls.Add(this.isCreditCard);
             this.Controls.Add(this.isBankAccount);
@@ -114,7 +114,7 @@
             this.Controls.Add(this.tableNameLabel);
             this.Controls.Add(this.addTable);
             this.Name = "addTableForm";
-            this.Text = "Add Table";
+            this.Text = "Add Finance Source";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

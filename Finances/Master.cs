@@ -39,5 +39,11 @@ namespace Finances
             addTransactionForm frm = new addTransactionForm();
             frm.Show();
         }
+
+        private void viewTransactionCaller_Click(object sender, EventArgs e)
+        {
+            viewTransactionsForm frm = new viewTransactionsForm();
+            frm.Show();
+        }
     }
 }

@@ -46,7 +46,7 @@ namespace Finances
             bool isValid = true;
 
             // Make sure that the value field is monetary
-            if (!Regex.IsMatch(transactionValueInput.Text, @"[-]?[0-9]+(\.[0-9][0-9])?"))
+            if (!Regex.IsMatch(transactionValueInput.Text, @"^[-]?[0-9]+(\.[0-9][0-9])?$"))
             {
                 isValid = false;
 
@@ -67,6 +67,7 @@ namespace Finances
         {
             if (!validateData()) return;
 
+            // Update the summary value
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString =
             "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"" + dataPath + "\"; Integrated Security = True";
@@ -79,6 +80,13 @@ namespace Finances
                 "(SELECT Id FROM dbo.FinanceValues WHERE name = '" + sourceName + "')";
             SqlCommand cmd = new SqlCommand(query, conn);
             conn.Open();
+            cmd.ExecuteNonQuery();
+
+            query = "INSERT INTO dbo.Transactions (Note, Amount, Date, Source) VALUES " + 
+                "('" + noteInput.Text + "', " + transactionValue + ", '" + transactionDateSource.SelectionRange.Start.ToShortDateString() + "', " +
+                "(SELECT Id FROM dbo.FinanceValues WHERE name = '" + sourceName + "'))";
+
+            cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
         }
     }

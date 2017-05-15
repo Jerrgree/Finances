@@ -33,6 +33,9 @@
             this.transactionSourceLabel = new System.Windows.Forms.Label();
             this.transactionValueLabel = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
+            this.noteInput = new System.Windows.Forms.TextBox();
+            this.noteLabel = new System.Windows.Forms.Label();
+            this.transactionDateSource = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // transactionSource
@@ -70,7 +73,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(51, 200);
+            this.submitButton.Location = new System.Drawing.Point(48, 92);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 4;
@@ -78,11 +81,37 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
+            // noteInput
+            // 
+            this.noteInput.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.noteInput.Location = new System.Drawing.Point(352, 44);
+            this.noteInput.Name = "noteInput";
+            this.noteInput.Size = new System.Drawing.Size(100, 20);
+            this.noteInput.TabIndex = 5;
+            // 
+            // noteLabel
+            // 
+            this.noteLabel.AutoSize = true;
+            this.noteLabel.Location = new System.Drawing.Point(352, 24);
+            this.noteLabel.Name = "noteLabel";
+            this.noteLabel.Size = new System.Drawing.Size(30, 13);
+            this.noteLabel.TabIndex = 6;
+            this.noteLabel.Text = "Note";
+            // 
+            // transactionDateSource
+            // 
+            this.transactionDateSource.Location = new System.Drawing.Point(510, 44);
+            this.transactionDateSource.Name = "transactionDateSource";
+            this.transactionDateSource.TabIndex = 7;
+            // 
             // addTransactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 261);
+            this.ClientSize = new System.Drawing.Size(763, 231);
+            this.Controls.Add(this.transactionDateSource);
+            this.Controls.Add(this.noteLabel);
+            this.Controls.Add(this.noteInput);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.transactionValueLabel);
             this.Controls.Add(this.transactionSourceLabel);
@@ -102,5 +131,8 @@
         private System.Windows.Forms.Label transactionSourceLabel;
         private System.Windows.Forms.Label transactionValueLabel;
         private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.TextBox noteInput;
+        private System.Windows.Forms.Label noteLabel;
+        private System.Windows.Forms.MonthCalendar transactionDateSource;
     }
 }
