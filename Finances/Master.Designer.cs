@@ -40,7 +40,7 @@
             this.addTableFormCall.Name = "addTableFormCall";
             this.addTableFormCall.Size = new System.Drawing.Size(139, 23);
             this.addTableFormCall.TabIndex = 0;
-            this.addTableFormCall.Text = "Add a new table";
+            this.addTableFormCall.Text = "Add a Financial Source";
             this.addTableFormCall.UseVisualStyleBackColor = true;
             this.addTableFormCall.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -50,7 +50,7 @@
             this.viewData.Name = "viewData";
             this.viewData.Size = new System.Drawing.Size(139, 23);
             this.viewData.TabIndex = 1;
-            this.viewData.Text = "View Data";
+            this.viewData.Text = "View Finances";
             this.viewData.UseVisualStyleBackColor = true;
             this.viewData.Click += new System.EventHandler(this.viewData_Click);
             // 
