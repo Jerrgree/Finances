@@ -23,9 +23,11 @@ namespace Finances
 
             // Initialzie the table
             // Initially show all data
-            string initialQuery = "SELECT FinanceValues.name, Transactions.Note, Transactions.Amount, Transactions.Date " +
+            string initialQuery = "SELECT FinanceValues.name, Transactions.Note, Transactions.Amount, Transactions.Date, Budgets.Name, BudgetCategories.Name " +
             "FROM FinanceValues " +
-            "INNER JOIN Transactions ON FinanceValues.Id = Transactions.Source";
+            "INNER JOIN Transactions ON FinanceValues.Id = Transactions.Source " + 
+            "LEFT OUTER JOIN Budgets ON Transactions.Budget = Budgets.Id " +
+            "LEFT OUTER JOIN BudgetCategories ON Transactions.Category = BudgetCategories.Id "; 
 
             fillTable(initialQuery);
 
@@ -64,7 +66,9 @@ namespace Finances
             string SelectClause = "SELECT FinanceValues.name, Transactions.Note, Transactions.Amount, Transactions.Date ";
             string FromClause = "FROM FinanceValues ";
             string WhereClause = "";
-            string JoinClause = "INNER JOIN Transactions ON FinanceValues.Id = Transactions.Source ";
+            string JoinClause = "INNER JOIN Transactions ON FinanceValues.Id = Transactions.Source " +
+            "LEFT OUTER JOIN Budgets ON Transactions.Budget = Budgets.Id " +
+            "LEFT OUTER JOIN BudgetCategories ON Transactions.Category = BudgetCategories.Id ";
 
             string beforeDate = beforeDateSource.SelectionRange.Start.ToShortDateString();
             string afterDate = afterDateSource.SelectionRange.Start.ToShortDateString();

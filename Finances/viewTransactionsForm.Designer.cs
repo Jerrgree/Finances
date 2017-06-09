@@ -68,7 +68,7 @@
             // afterLabel
             // 
             this.afterLabel.AutoSize = true;
-            this.afterLabel.Location = new System.Drawing.Point(340, 272);
+            this.afterLabel.Location = new System.Drawing.Point(241, 272);
             this.afterLabel.Name = "afterLabel";
             this.afterLabel.Size = new System.Drawing.Size(32, 13);
             this.afterLabel.TabIndex = 4;
@@ -77,7 +77,7 @@
             // beforeLabel
             // 
             this.beforeLabel.AutoSize = true;
-            this.beforeLabel.Location = new System.Drawing.Point(625, 272);
+            this.beforeLabel.Location = new System.Drawing.Point(526, 272);
             this.beforeLabel.Name = "beforeLabel";
             this.beforeLabel.Size = new System.Drawing.Size(41, 13);
             this.beforeLabel.TabIndex = 6;
@@ -85,14 +85,14 @@
             // 
             // afterDateSource
             // 
-            this.afterDateSource.Location = new System.Drawing.Point(247, 294);
+            this.afterDateSource.Location = new System.Drawing.Point(148, 294);
             this.afterDateSource.MaxSelectionCount = 1;
             this.afterDateSource.Name = "afterDateSource";
             this.afterDateSource.TabIndex = 7;
             // 
             // beforeDateSource
             // 
-            this.beforeDateSource.Location = new System.Drawing.Point(538, 294);
+            this.beforeDateSource.Location = new System.Drawing.Point(439, 294);
             this.beforeDateSource.MaxSelectionCount = 1;
             this.beforeDateSource.Name = "beforeDateSource";
             this.beforeDateSource.TabIndex = 8;
@@ -110,7 +110,7 @@
             // ignoreInfo
             // 
             this.ignoreInfo.AutoSize = true;
-            this.ignoreInfo.Location = new System.Drawing.Point(433, 252);
+            this.ignoreInfo.Location = new System.Drawing.Point(334, 252);
             this.ignoreInfo.Name = "ignoreInfo";
             this.ignoreInfo.Size = new System.Drawing.Size(157, 13);
             this.ignoreInfo.TabIndex = 10;
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 455);
+            this.ClientSize = new System.Drawing.Size(1002, 455);
             this.Controls.Add(this.ignoreInfo);
             this.Controls.Add(this.filterButton);
             this.Controls.Add(this.beforeDateSource);
