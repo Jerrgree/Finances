@@ -19,7 +19,6 @@ namespace Finances
         string dataPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\FinanceData.mdf";
         public viewTransactionsForm()
         {
-            nullDate = beforeDateSource.SelectionRange.Start.ToShortDateString();
             initializeDropDown();
 
             // Initialzie the table
@@ -29,6 +28,8 @@ namespace Finances
             "INNER JOIN Transactions ON FinanceValues.Id = Transactions.Source";
 
             fillTable(initialQuery);
+
+            nullDate = beforeDateSource.TodayDate.ToShortDateString();
         }
 
         private void initializeDropDown()

@@ -26,7 +26,7 @@ namespace Finances
             "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"" + dataPath + "\"; Integrated Security = True";
 
             // Select to see if a row matches the user's designated table
-            string query = "SELECT * FROM dbo.FinanceValues";
+            string query = "SELECT FinanceValues.name, FinanceValues.value, FinanceValues.maxValue, FinanceValues.type FROM dbo.FinanceValues";
             SqlCommand cmd = new SqlCommand(query, conn);
 
             conn.Open();
